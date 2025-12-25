@@ -13,7 +13,7 @@ export function CVSection() {
           technology projects.
         </p>
 
-        <a href="#" className="inline-flex items-center gap-3 bg-[#FF6B35] text-white text-lg font-bold px-10 py-5 rounded-full hover:bg-[#ff8559] hover:scale-105 transition-all duration-300 shadow-[0_0_40px_rgba(255,107,53,0.3)]">
+        <a href="https://drive.google.com/file/d/1JCVndSaWhLusNJ23zIHBObRBwN1chval/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-[#FF6B35] text-white text-lg font-bold px-10 py-5 rounded-full hover:bg-[#ff8559] hover:scale-105 transition-all duration-300 shadow-[0_0_40px_rgba(255,107,53,0.3)]">
           <Download className="w-6 h-6" />
           Download CV
         </a>

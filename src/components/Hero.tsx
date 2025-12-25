@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowDown } from 'lucide-react';
 import portrait from '../my4.png';
 
 export function Hero() {
+  const roles = ['Biomedical Technologist', 'Creative Artist', 'UI/UX Designer', 'Modeler'];
+  const [currentRole, setCurrentRole] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentRole((prev) => (prev + 1) % roles.length);
+    }, 4000); // Change every 4 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -17,7 +27,7 @@ export function Hero() {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#FF6B35] rounded-full mix-blend-screen filter blur-[128px] opacity-5" />
 
       <div className="z-10 max-w-5xl mx-auto space-y-8">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white leading-tight">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-tight">
           NILUPUL
           <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">
@@ -26,8 +36,10 @@ export function Hero() {
         </h1>
 
         <p className="text-xl md:text-2xl text-gray-400 font-medium tracking-wide max-w-2xl mx-auto">
-          Biomedical Technology •{' '}
-          <span className="text-[#FF6B35]">UI/UX Designer</span>
+          I am a{' '}
+          <span className="text-[#FF6B35] inline-block min-w-max font-bold">
+            {roles[currentRole]}
+          </span>
         </p>
 
         <nav className="pt-12">
