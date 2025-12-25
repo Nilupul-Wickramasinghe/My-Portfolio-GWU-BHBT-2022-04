@@ -1,11 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Smartphone, CircuitBoard, HeartPulse } from 'lucide-react';
+import p1 from '../p1.png';
 export function Projects() {
   const projects = [{
     title: 'Aidmate App',
     category: 'UI/UX Design',
     description: 'A comprehensive healthcare companion app design focusing on accessibility and user-friendly navigation for patients.',
+    image: p1,
     icon: HeartPulse,
     tags: ['Figma', 'Prototyping', 'User Research'],
     color: 'from-blue-500 to-cyan-500'
@@ -58,8 +60,14 @@ export function Projects() {
           duration: 0.6,
           delay: index * 0.2
         }} className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow flex flex-col">
-              <div className={`h-48 bg-gradient-to-br ${project.color} p-6 flex items-center justify-center`}>
-                <project.icon className="w-20 h-20 text-white opacity-90" />
+              <div className={`h-48 bg-gradient-to-br ${project.color} p-0 flex items-center justify-center`}>
+                {project.image ? (
+                  <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+                ) : (
+                  <div className="p-6 flex items-center justify-center">
+                    <project.icon className="w-20 h-20 text-white opacity-90" />
+                  </div>
+                )}
               </div>
 
               <div className="p-6 flex-1 flex flex-col">
