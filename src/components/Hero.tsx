@@ -21,13 +21,13 @@ export function Hero() {
       });
     }
   };
-  return <section className="relative min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-black overflow-hidden">
+  return <section className="relative min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-white dark:bg-black overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#FF6B35] rounded-full mix-blend-screen filter blur-[128px] opacity-10 animate-pulse" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#FF6B35] rounded-full mix-blend-screen filter blur-[128px] opacity-5" />
 
       <div className="z-10 max-w-5xl mx-auto space-y-8">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-tight">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-black dark:text-white leading-tight">
           NILUPUL
           <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">
@@ -35,7 +35,7 @@ export function Hero() {
           </span>
         </h1>
 
-        <p className="text-xl md:text-2xl text-gray-400 font-medium tracking-wide max-w-2xl mx-auto">
+        <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-400 font-medium tracking-wide max-w-2xl mx-auto">
           I am a{' '}
           <span className="text-[#FF6B35] inline-block min-w-max font-bold">
             {roles[currentRole]}
@@ -45,7 +45,7 @@ export function Hero() {
         <nav className="pt-12">
           <ul className="flex flex-wrap justify-center gap-8 md:gap-12">
             {['Projects', 'Skills', 'Certificates'].map(item => <li key={item}>
-                <button onClick={() => scrollToSection(item.toLowerCase())} className="group relative text-lg font-bold text-gray-400 hover:text-white transition-colors duration-300">
+                <button onClick={() => scrollToSection(item.toLowerCase())} className="group relative text-lg font-bold text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors duration-300">
                   {item}
                   <span className="absolute -bottom-2 left-0 w-0 h-1 bg-[#FF6B35] transition-all duration-300 group-hover:w-full" />
                 </button>
