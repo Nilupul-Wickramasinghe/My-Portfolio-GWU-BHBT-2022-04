@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Camera, Scissors, Sparkles } from 'lucide-react';
+import { image } from 'framer-motion/client';
 type Category = 'modeling' | 'makeup';
 export function Creative() {
   const [activeTab, setActiveTab] = useState<Category>('modeling');
   const items = {
     modeling: [{
-      title: 'Fashion Editorial',
+      title: 'Tamil Shoot',
       desc: 'Outdoor shoot concept',
       color: 'bg-blue-100'
+     
     }, {
       title: 'Portrait Series',
       desc: 'Studio lighting study',
