@@ -1,37 +1,47 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Camera, Scissors, Sparkles } from 'lucide-react';
-import { image } from 'framer-motion/client';
 type Category = 'modeling' | 'makeup';
 export function Creative() {
   const [activeTab, setActiveTab] = useState<Category>('modeling');
   const items = {
     modeling: [{
       title: 'Tamil Shoot',
-      desc: 'Outdoor shoot concept',
-      color: 'bg-blue-100'
-     
+      desc: 'Outdoor casual shoot with a Tamil touch—simple, natural, and confident.',
+      color: 'bg-blue-100',
+      image: 'Tamil Shoot.png'
     }, {
-      title: 'Portrait Series',
-      desc: 'Studio lighting study',
-      color: 'bg-indigo-100'
+      title: 'Outdoor Shoot',
+      desc: 'A natural outdoor shoot capturing confidence, style, and authentic expressions in an open environment.',
+      color: 'bg-indigo-100',
+      image: undefined
     }, {
-      title: 'Commercial',
-      desc: 'Brand ambassador work',
-      color: 'bg-violet-100'
+      title: 'Formal Wear Shoot',
+      desc: 'A modern full suit shoot focusing on clean cuts, strong posture, and professional style.',
+      color: 'bg-violet-100',
+      image: undefined
+    }, {
+      title: 'Urban Commercial',
+      desc: 'This series captures a smart-casual aesthetic, highlighting the confident and approachable energy essential for lifestyle brand advertising.',
+      color: 'bg-violet-100',
+      image: undefined
     }],
+    
     makeup: [{
       title: 'Bridal Glam',
       desc: 'Traditional & Modern',
-      color: 'bg-pink-100'
+      color: 'bg-pink-100',
+      image: undefined
     }, {
       title: 'Creative SFX',
       desc: 'Special effects makeup',
-      color: 'bg-rose-100'
+      color: 'bg-rose-100',
+      image: undefined
     }, {
       title: 'Editorial Look',
       desc: 'High fashion concept',
-      color: 'bg-fuchsia-100'
+      color: 'bg-fuchsia-100',
+      image: undefined
     }]
   };
   return <section id="creative" className="py-20 bg-gray-50">
@@ -83,9 +93,13 @@ export function Creative() {
           duration: 0.4
         }} className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {items[activeTab].map((item, index) => <div key={index} className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-                {/* Placeholder Image Area */}
-                <div className={`h-64 w-full ${item.color} flex items-center justify-center group-hover:scale-105 transition-transform duration-500`}>
-                  <Sparkles className={`w-12 h-12 ${activeTab === 'modeling' ? 'text-purple-300' : 'text-pink-300'}`} />
+                {/* Image Area */}
+                <div className={`h-64 w-full ${item.color} flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden`}>
+                  {item.image ? (
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                  ) : (
+                    <Sparkles className={`w-12 h-12 ${activeTab === 'modeling' ? 'text-purple-300' : 'text-pink-300'}`} />
+                  )}
                 </div>
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
