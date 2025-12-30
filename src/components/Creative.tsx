@@ -14,7 +14,7 @@ export function Creative() {
       title: 'Outdoor Shoot',
       desc: 'A natural outdoor shoot capturing confidence, style, and authentic expressions in an open environment.',
       color: 'bg-indigo-100',
-      image: undefined
+      image: 'src/Outdoor shoot.png'
     }, {
       title: 'Formal Wear Shoot',
       desc: 'A modern full suit shoot focusing on clean cuts, strong posture, and professional style.',

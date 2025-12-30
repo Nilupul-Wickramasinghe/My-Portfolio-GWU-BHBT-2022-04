@@ -41,6 +41,9 @@ export function Navigation() {
     name: 'Creative',
     href: 'creative'
   }, {
+    name: 'Achievements',
+    href: 'achievements'
+  }, {
     name: 'Skills',
     href: 'skills'
   }, {

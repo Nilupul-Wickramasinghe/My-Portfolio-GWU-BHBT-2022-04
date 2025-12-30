@@ -6,6 +6,7 @@ import { Education } from './components/Education';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Creative } from './components/Creative';
+import { Achievements } from './components/Achievements';
 import { Certificates } from './components/Certificates';
 import { CVSection } from './components/CVSection';
 export function App() {
@@ -32,6 +33,9 @@ export function App() {
         </section>
         <section id="creative">
           <Creative />
+        </section>
+        <section id="achievements">
+          <Achievements />
         </section>
         <section id="certificates">
           <Certificates />
