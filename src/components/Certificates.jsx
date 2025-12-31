@@ -13,7 +13,7 @@ const certificates = [{
   issuer: 'LEAGO Model Academy',
   date: '2022'
 }, {
-  title: 'LEAGO Model Academy',
+  title: 'Professional Modeling & Personality Development Workshop',
   issuer: 'LEAGO Model Academy',
   date: '2025'
 }];
