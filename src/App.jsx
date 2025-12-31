@@ -9,9 +9,11 @@ import { Creative } from './components/Creative';
 import { Achievements } from './components/Achievements';
 import { Certificates } from './components/Certificates';
 import { CVSection } from './components/CVSection';
+import { WhatsAppButton } from './components/WhatsAppButton';
 export function App() {
-  return <div className="min-h-screen bg-white font-sans text-gray-900">
+  return <div className="min-h-screen bg-white dark:bg-black font-sans text-gray-900 dark:text-gray-100">
       <Navigation />
+      <WhatsAppButton />
 
       <main className="pt-20">
         {' '}
@@ -45,7 +47,7 @@ export function App() {
         </section>
       </main>
 
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gray-900 dark:bg-gray-800 text-white py-12">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <p className="text-gray-400">
             © {new Date().getFullYear()} Nilupul Wickramasingha. All rights

@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react';
 
-type Theme = 'light' | 'dark';
-
-function getInitialTheme(): Theme {
+function getInitialTheme() {
   try {
-    const stored = localStorage.getItem('theme') as Theme | null;
+    const stored = localStorage.getItem('theme');
     if (stored === 'light' || stored === 'dark') return stored;
   } catch (e) {
     // ignore
@@ -17,7 +15,7 @@ function getInitialTheme(): Theme {
 }
 
 export default function useTheme() {
-  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+  const [theme, setTheme] = useState(getInitialTheme);
 
   useEffect(() => {
     try {
@@ -30,5 +28,5 @@ export default function useTheme() {
 
   const toggle = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
 
-  return { theme, setTheme, toggle } as const;
+  return { theme, setTheme, toggle };
 }

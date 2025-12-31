@@ -12,7 +12,7 @@ export function Navigation() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+  const scrollToSection = (e, id) => {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {

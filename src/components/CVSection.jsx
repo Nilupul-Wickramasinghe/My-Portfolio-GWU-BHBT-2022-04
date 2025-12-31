@@ -1,14 +1,14 @@
 import React from 'react';
 import { Download } from 'lucide-react';
 export function CVSection() {
-  return <section className="py-32 px-4 bg-black text-center relative overflow-hidden">
+    return <section className="py-32 px-4 bg-white dark:bg-black text-center relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#FF6B35]/10 via-black to-black" />
 
       <div className="relative z-10 max-w-3xl mx-auto">
-        <h2 className="text-4xl md:text-6xl font-black text-white mb-8">
+        <h2 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white mb-8">
           Ready to collaborate?
         </h2>
-        <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+        <p className="text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
           I'm currently open to new opportunities in UI/UX design and biomedical
           technology projects.
         </p>

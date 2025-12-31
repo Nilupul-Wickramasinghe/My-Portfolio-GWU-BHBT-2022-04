@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { GraduationCap, Calendar, MapPin } from 'lucide-react';
 export function Education() {
-  return <section id="education" className="py-20 bg-white">
+  return <section id="education" className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div initial={{
         opacity: 0,
@@ -35,21 +35,21 @@ export function Education() {
         }} transition={{
           duration: 0.6,
           delay: 0.2
-        }} className="relative pl-8 border-l-2 border-purple-200 space-y-12">
+        }} className="relative pl-8 border-l-2 border-purple-200 dark:border-purple-800 space-y-12">
             {/* Education Item */}
             <div className="relative">
               <div className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-purple-600 border-4 border-white shadow-md" />
-              <div className="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+              <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
                       Biomedical Technology
                     </h3>
                     <p className="text-purple-600 font-medium">
                       Undergraduate Degree
                     </p>
                   </div>
-                  <div className="mt-2 md:mt-0 flex items-center text-gray-500 text-sm bg-white px-3 py-1 rounded-full border border-gray-200 shadow-sm">
+                  <div className="mt-2 md:mt-0 flex items-center text-gray-500 dark:text-gray-300 text-sm bg-white dark:bg-gray-700 px-3 py-1 rounded-full border border-gray-200 dark:border-gray-600 shadow-sm">
                     <Calendar size={14} className="mr-2" />
                     <span>Present</span>
                   </div>
