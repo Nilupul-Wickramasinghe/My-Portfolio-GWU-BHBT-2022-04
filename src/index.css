@@ -5,3 +5,27 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 /* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL - DO NOT DELETE THIS COMMENT */
+
+@layer base {
+	/* Improve default text contrast in dark mode */
+	.dark body,
+	.dark .min-h-screen {
+		color: #e5e7eb; /* text-gray-200 */
+	}
+
+	.dark p,
+	.dark span,
+	.dark li,
+	.dark a,
+	.dark h1,
+	.dark h2,
+	.dark h3,
+	.dark h4 {
+		color: #e5e7eb;
+	}
+
+	/* Ensure small meta text remains readable */
+	.dark .text-gray-400 {
+		color: #9ca3af;
+	}
+}
