@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Calendar, MapPin } from 'lucide-react';
+import { Calendar, MapPin } from 'lucide-react';
 
 const EDUCATION = [
   {
@@ -20,6 +20,15 @@ const EDUCATION = [
     place: 'LPEC Campus',
     description:
       'A professional qualification focused on people management, recruitment, training, performance evaluation, and workplace relations.'
+  },
+  {
+    id: 'dict',
+    title: 'Diploma in Information and Communication Technology (ICT)',
+    subtitle: '2019',
+    when: '2019',
+    place: '—',
+    description:
+      'A foundational qualification covering computer applications, basic programming, networking concepts, and digital technologies, developing practical IT skills for academic and professional use.'
   }
 ];
 
@@ -35,9 +44,7 @@ export function Education() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-4">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
-              Education
-            </span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">Education</span>
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full" />
         </motion.div>
