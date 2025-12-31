@@ -28,4 +28,16 @@
 	.dark .text-gray-400 {
 		color: #9ca3af;
 	}
+	/* Common utility overrides to ensure readability in dark mode */
+	.dark .text-gray-700 {
+		color: #d1d5db; /* text-gray-300 */
+	}
+	.dark .text-gray-600 {
+		color: #9ca3af; /* text-gray-400 */
+	}
+	.dark .text-gray-800,
+	.dark .text-gray-900,
+	.dark .text-black {
+		color: #f3f4f6; /* text-gray-100 */
+	}
 }
