@@ -64,6 +64,18 @@ export function Projects() {
           duration: 0.6,
           delay: index * 0.2
         }} whileHover={{ y: -8, scale: 1.02 }} className="bg-white dark:bg-[#07111a] rounded-2xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow flex flex-col smooth-transform">
+          {projects.map((project, index) => <motion.div key={index} initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6,
+            delay: index * 0.2
+          }} whileHover={{ y: -8, scale: 1.02 }} className="bg-white dark:bg-[#07111a] rounded-2xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow flex flex-col smooth-transform ring-0 dark:ring-1 dark:ring-white/5">
               <div className={`h-48 bg-gradient-to-br ${project.color} p-0 flex items-center justify-center`}>
                 {project.image ? (
                   <motion.img src={project.image} alt={project.title} className="w-full h-48 object-cover smooth-transform" initial={{ scale: 1 }} whileHover={{ scale: 1.06 }} transition={{ duration: 0.6 }} />
