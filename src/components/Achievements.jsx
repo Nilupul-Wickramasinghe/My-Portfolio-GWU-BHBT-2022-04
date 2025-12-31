@@ -108,7 +108,7 @@ export function Achievements() {
 
                 {/* Highlight Tags */}
                 <div className="flex flex-wrap gap-3 pt-4">
-                  <span className="px-4 py-2 bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300 rounded-full text-sm font-semibold">{a.position.includes('Runner') ? 'Hackathon Winner' : a.category}</span>
+                  <span className="px-4 py-2 bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300 rounded-full text-sm font-semibold">{a.category}</span>
                   <span className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded-full text-sm font-semibold">{a.focusArea.split(' · ')[0]}</span>
                   <span className="px-4 py-2 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded-full text-sm font-semibold">{a.focusArea.split(' · ').slice(1).join(' · ')}</span>
                 </div>
