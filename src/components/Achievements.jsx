@@ -32,7 +32,7 @@ export function Achievements() {
   ];
 
   return (
-    <section id="achievements" className="py-24 px-4 bg-white dark:bg-black">
+    <section id="achievements" className="py-24 px-4 bg-white dark:bg-gray-900">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -76,17 +76,17 @@ export function Achievements() {
               >
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <Trophy className="w-8 h-8 text-yellow-600" />
-                    <span className="text-xl font-bold text-yellow-600">{a.position}</span>
+                    <Trophy className="w-8 h-8 text-yellow-600 dark:text-yellow-400" />
+                    <span className="text-xl font-bold text-yellow-600 dark:text-yellow-400">{a.position}</span>
                   </div>
 
                   <h3 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">{a.event}</h3>
 
-                  <p className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">{a.name}</p>
+                  <p className="text-lg font-semibold text-gray-700 dark:text-gray-100 mb-2">{a.name}</p>
 
                   <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 mb-6">
-                    <Building2 size={18} />
-                    <span>{a.institution}</span>
+                    <Building2 size={18} className="dark:text-gray-200" />
+                    <span className="text-gray-700 dark:text-gray-200">{a.institution}</span>
                   </div>
                 </div>
 
