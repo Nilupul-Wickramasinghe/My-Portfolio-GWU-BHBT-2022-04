@@ -21,7 +21,7 @@ const skills = [{
   proficiency: 88,
   icon: <Cpu />
 }, {
-  name: 'Python',
+  name: 'HTML',
   proficiency: 80,
   icon: <Database />
 }];

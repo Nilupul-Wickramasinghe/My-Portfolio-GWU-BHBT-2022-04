@@ -1,21 +1,21 @@
 import React from 'react';
 import { Award, Calendar } from 'lucide-react';
 const certificates = [{
-  title: 'Google UX Design Professional Certificate',
-  issuer: 'Coursera',
-  date: '2023'
+  title: 'Certifiacte in Medical Laborotary Technology',
+  issuer: 'SDTI Campus',
+  date: '2025'
 }, {
-  title: 'Biomedical Engineering Fundamentals',
-  issuer: 'University of Moratuwa',
+  title: 'Chest X-Ray Interpretation',
+  issuer: 'International Nursing Collage Private Limited',
+  date: '2025'
+}, {
+  title: 'Higher Qualification in Hair and Beauty',
+  issuer: 'LEAGO Model Academy',
   date: '2022'
 }, {
-  title: 'Advanced React & Redux',
-  issuer: 'Udemy',
-  date: '2023'
-}, {
-  title: 'Human-Computer Interaction',
-  issuer: 'Interaction Design Foundation',
-  date: '2022'
+  title: 'LEAGO Model Academy',
+  issuer: 'LEAGO Model Academy',
+  date: '2025'
 }];
 export function Certificates() {
   return <section id="certificates" className="py-24 px-4 bg-white dark:bg-black border-t border-gray-200 dark:border-gray-900">
