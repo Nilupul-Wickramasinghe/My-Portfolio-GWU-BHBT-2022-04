@@ -54,17 +54,7 @@ export function App() {
             © {new Date().getFullYear()} Nilupul Wickramasingha. All rights
             reserved.
           </p>
-          <div className="mt-4 flex justify-center space-x-6">
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-              LinkedIn
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-              Behance
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-              Instagram
-            </a>
-          </div>
+          
         </div>
       </footer>
     </div>;
