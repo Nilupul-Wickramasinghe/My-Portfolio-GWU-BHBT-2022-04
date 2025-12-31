@@ -63,10 +63,10 @@ export function Projects() {
         }} transition={{
           duration: 0.6,
           delay: index * 0.2
-        }} className="bg-white dark:bg-[#07111a] rounded-2xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow flex flex-col">
+        }} whileHover={{ y: -8, scale: 1.02 }} className="bg-white dark:bg-[#07111a] rounded-2xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow flex flex-col smooth-transform">
               <div className={`h-48 bg-gradient-to-br ${project.color} p-0 flex items-center justify-center`}>
                 {project.image ? (
-                  <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+                  <motion.img src={project.image} alt={project.title} className="w-full h-48 object-cover smooth-transform" initial={{ scale: 1 }} whileHover={{ scale: 1.06 }} transition={{ duration: 0.6 }} />
                 ) : (
                   <div className="p-6 flex items-center justify-center">
                     <project.icon className="w-20 h-20 text-white opacity-90" />
