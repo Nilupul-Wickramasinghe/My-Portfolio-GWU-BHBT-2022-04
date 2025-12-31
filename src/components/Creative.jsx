@@ -35,18 +35,18 @@ export function Creative() {
       color: 'bg-pink-100',
       image: undefined
     }, {
-      title: 'Creative SFX',
-      desc: 'Special effects makeup',
+      title: 'Hair Setting',
+      desc: 'Special effects Hair',
       color: 'bg-rose-100',
       image: undefined
     }, {
-      title: 'Editorial Look',
+      title: 'Makeup',
       desc: 'High fashion concept',
       color: 'bg-fuchsia-100',
       image: undefined
     }]
   };
-  return <section id="creative" className="py-20 bg-gray-50 dark:bg-gray-900">
+  return <section id="creative" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div initial={{
         opacity: 0,
@@ -70,11 +70,11 @@ export function Creative() {
           </p>
 
           <div className="flex justify-center space-x-4 mb-12">
-            <button onClick={() => setActiveTab('modeling')} className={`flex items-center px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeTab === 'modeling' ? 'bg-purple-600 text-white shadow-lg scale-105' : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900'}`}>
+            <button onClick={() => setActiveTab('modeling')} className={`flex items-center px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeTab === 'modeling' ? 'bg-purple-600 text-white shadow-lg scale-105' : 'bg-white text-gray-600 hover:bg-purple-50'}`}>
               <Camera size={18} className="mr-2" />
               Modeling
             </button>
-            <button onClick={() => setActiveTab('makeup')} className={`flex items-center px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeTab === 'makeup' ? 'bg-pink-600 text-white shadow-lg scale-105' : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-pink-50 dark:hover:bg-pink-900'}`}>
+            <button onClick={() => setActiveTab('makeup')} className={`flex items-center px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeTab === 'makeup' ? 'bg-pink-600 text-white shadow-lg scale-105' : 'bg-white text-gray-600 hover:bg-pink-50'}`}>
               <Scissors size={18} className="mr-2" />
               Hair & Makeup
             </button>
@@ -109,7 +109,7 @@ export function Creative() {
               }} whileHover={{
                 y: -10,
                 transition: { duration: 0.3 }
-              }} className="group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300">
+              }} className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300">
                 {/* Image Area */}
                 <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} className={`h-64 w-full ${item.color} flex items-center justify-center overflow-hidden`}>
                   {item.image ? (

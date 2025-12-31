@@ -30,7 +30,7 @@ export function Hero() {
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-black dark:text-white leading-tight">
           NILUPUL
           <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-500 dark:from-gray-200">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">
             WICKRAMASINGHA
           </span>
         </h1>
@@ -62,7 +62,7 @@ export function Hero() {
       </div>
 
       <div className="absolute bottom-10 animate-bounce">
-        <ArrowDown className="w-6 h-6 text-gray-600 dark:text-gray-300" />
+        <ArrowDown className="w-6 h-6 text-gray-600" />
       </div>
     </section>;
 }

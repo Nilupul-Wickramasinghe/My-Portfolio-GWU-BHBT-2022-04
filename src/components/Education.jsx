@@ -26,7 +26,7 @@ const EDUCATION = [
     title: 'Diploma in Information and Communication Technology (ICT)',
     subtitle: '2019',
     when: '2019',
-    place: '—',
+    place: 'Nenasala Education Center',
     description:
       'A foundational qualification covering computer applications, basic programming, networking concepts, and digital technologies, developing practical IT skills for academic and professional use.'
   }
