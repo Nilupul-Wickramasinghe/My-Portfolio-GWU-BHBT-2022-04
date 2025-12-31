@@ -17,14 +17,15 @@ export function Navigation() {
     const element = document.getElementById(id);
     if (element) {
       const offset = 80; // Height of nav
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
+      // Preferred calculation using pageYOffset for reliability
+      const top = element.getBoundingClientRect().top + window.pageYOffset - offset;
+      // If scrollTo with top works use it; fall back to scrollIntoView
+      try {
+        window.scrollTo({ top, behavior: 'smooth' });
+      } catch (err) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        window.scrollBy(0, -offset);
+      }
       setIsOpen(false);
     }
   };
