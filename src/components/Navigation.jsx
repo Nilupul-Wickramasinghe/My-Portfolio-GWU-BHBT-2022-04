@@ -68,8 +68,7 @@ export function Navigation() {
             <button onClick={toggle} aria-label="Toggle theme" className="p-2 rounded-full text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
               {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
             </button>
-            <a href="/resume.pdf" // Placeholder for resume link
-            className="bg-teal-700 hover:bg-teal-600 text-white px-5 py-2 rounded-full text-sm font-medium transition-colors duration-200">
+            <a href="#cv" onClick={e => scrollToSection(e, 'cv')} className="bg-teal-700 hover:bg-teal-600 text-white px-5 py-2 rounded-full text-sm font-medium transition-colors duration-200">
               Resume
             </a>
           </div>
@@ -92,7 +91,7 @@ export function Navigation() {
             {navLinks.map(link => <a key={link.name} href={`#${link.href}`} onClick={e => scrollToSection(e, link.href)} className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-900 rounded-md">
                 {link.name}
               </a>)}
-            <a href="/resume.pdf" className="block w-full text-center mt-4 bg-teal-700 hover:bg-teal-600 text-white px-5 py-3 rounded-md text-base font-medium transition-colors">
+            <a href="#cv" onClick={e => scrollToSection(e, 'cv')} className="block w-full text-center mt-4 bg-teal-700 hover:bg-teal-600 text-white px-5 py-3 rounded-md text-base font-medium transition-colors">
               Resume
             </a>
           </div>

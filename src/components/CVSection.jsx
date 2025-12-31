@@ -1,7 +1,7 @@
 import React from 'react';
 import { Download } from 'lucide-react';
 export function CVSection() {
-  return <section className="py-32 px-4 bg-black text-center relative overflow-hidden">
+  return <section id="cv" className="py-32 px-4 bg-black text-center relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#FF6B35]/10 via-black to-black" />
 
       <div className="relative z-10 max-w-3xl mx-auto">
