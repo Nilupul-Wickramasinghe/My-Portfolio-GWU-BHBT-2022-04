@@ -4,6 +4,10 @@ import { Camera, Scissors, Sparkles } from 'lucide-react';
 import tamilShoot from '../Tamil Shoot.png';
 import casualWear from '../CAsual Wear.png';
 import fashion from '../Fashion.png';
+import bridel from '../bridel.jpg';
+import hairDressing from '../Hair dressing.jpg';
+import makeupImg from '../makeup.jpg';
+
 export function Creative() {
   const [activeTab, setActiveTab] = useState('modeling');
   const items = {
@@ -33,17 +37,17 @@ export function Creative() {
       title: 'Bridal Glam',
       desc: 'Traditional & Modern',
       color: 'bg-pink-100',
-      image: undefined
+      image: bridel
     }, {
       title: 'Hair Setting',
       desc: 'Special effects Hair',
       color: 'bg-rose-100',
-      image: undefined
+      image: hairDressing
     }, {
       title: 'Makeup',
       desc: 'High fashion concept',
       color: 'bg-fuchsia-100',
-      image: undefined
+      image: makeupImg
     }]
   };
   return <section id="creative" className="py-20 bg-gray-50">
