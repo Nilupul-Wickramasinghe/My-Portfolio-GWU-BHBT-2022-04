@@ -10,6 +10,7 @@ import { Achievements } from './components/Achievements';
 import { Certificates } from './components/Certificates';
 import { CVSection } from './components/CVSection';
 import { WhatsAppButton } from './components/WhatsAppButton';
+import { Section } from './components/SectionWrapper';
 export function App() {
   return <div className="min-h-screen bg-white dark:bg-black font-sans text-gray-900 dark:text-gray-100">
       <Navigation />
@@ -18,33 +19,33 @@ export function App() {
       <main className="pt-20">
         {' '}
         {/* Add padding top to account for fixed header */}
-        <section id="hero">
+        <Section id="hero" className="">
           <Hero />
-        </section>
-        <section id="about">
+        </Section>
+        <Section id="about">
           <About />
-        </section>
-        <section id="education">
+        </Section>
+        <Section id="education">
           <Education />
-        </section>
-        <section id="skills">
+        </Section>
+        <Section id="skills">
           <Skills />
-        </section>
-        <section id="projects">
+        </Section>
+        <Section id="projects">
           <Projects />
-        </section>
-        <section id="creative">
+        </Section>
+        <Section id="creative">
           <Creative />
-        </section>
-        <section id="achievements">
+        </Section>
+        <Section id="achievements">
           <Achievements />
-        </section>
-        <section id="certificates">
+        </Section>
+        <Section id="certificates">
           <Certificates />
-        </section>
-        <section id="contact">
+        </Section>
+        <Section id="contact">
           <CVSection />
-        </section>
+        </Section>
       </main>
 
       <footer className="bg-gray-900 dark:bg-gray-800 text-white py-12">

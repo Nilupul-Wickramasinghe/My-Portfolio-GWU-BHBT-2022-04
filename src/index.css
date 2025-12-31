@@ -40,4 +40,25 @@
 	.dark .text-black {
 		color: #f3f4f6; /* text-gray-100 */
 	}
+	/* Smooth transform utility for images and interactive elements */
+	.smooth-transform {
+		transition: transform 280ms cubic-bezier(.22,1,.36,1), box-shadow 280ms ease;
+	}
+	.smooth-transform:hover {
+		transform: translateY(-6px) scale(1.02);
+	}
+
+	/* Subtle fade utility for inline elements */
+	.fade-in {
+		opacity: 0;
+		transform: translateY(6px);
+		animation: fadeInUp 600ms cubic-bezier(.22,1,.36,1) forwards;
+	}
+
+	@keyframes fadeInUp {
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 }
